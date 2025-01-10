@@ -1,8 +1,8 @@
-package codeSprint1;
+package com.codeSprint;
 
 import java.util.HashMap;
 
-import codeSprint1.LinkedListCycle.ListNode;
+import com.codeSprint.LinkedListCycle.ListNode;
 
 public class DetectCycle {
 	public static class ListNode {

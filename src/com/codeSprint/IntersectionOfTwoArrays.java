@@ -1,4 +1,4 @@
-package codeSprint1;
+package com.codeSprint;
 
 import java.util.HashSet;
 import java.util.Set;

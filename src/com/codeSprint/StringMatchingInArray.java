@@ -1,4 +1,4 @@
-package codeSprint1;
+package com.codeSprint;
 
 import java.util.ArrayList;
 import java.util.List;

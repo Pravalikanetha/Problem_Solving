@@ -1,4 +1,4 @@
-package codeSprint1;
+package com.codeSprint;
 
 public class NextGreatestLetter {
 	public static char nextGreatestLetter(char[] letters, char target) {

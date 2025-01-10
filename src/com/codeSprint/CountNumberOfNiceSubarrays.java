@@ -1,4 +1,4 @@
-package codeSprint1;
+package com.codeSprint;
 
 public class CountNumberOfNiceSubarrays {
 	public static int atMost(int[] nums, int k) {
