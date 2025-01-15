@@ -23,18 +23,21 @@ public class WordPattern {
 			    if (hm.containsValue(str)) {
 			        return false;
 			    }
-			    hm.put(c, str); 
 			}
-
+			
 		}
 		System.out.println(hm);
 		return true;
 	}
+	public static int strStr(String haystack, String needle) {
+        return haystack.indexOf(needle);
+    }
 	public static void main(String[] args) {
 		String pattern = "abah"; 
 		String s = "dog cat dog cat";
 		boolean p = wordPattern(pattern, s);
-		System.out.println(p);
+//		System.out.println(p);
+		System.out.println(strStr("amazon", "zon"));
  	}
 
 }

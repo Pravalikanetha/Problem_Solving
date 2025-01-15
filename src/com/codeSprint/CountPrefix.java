@@ -14,8 +14,8 @@ public class CountPrefix {
 	}
 	
 	public static void main(String[] args) {
-		String[] words = {"leetcode","win","loops","success"};
-		String pref = "at";
+//		String[] words = {"leetcode","win","loops","success"};
+//		String pref = "at";
 //		System.out.println(prefixCount(words, pref));
 		HashMap<Integer,Integer> hm = new HashMap<>();
 		hm.put(2, 1);

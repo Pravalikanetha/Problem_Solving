@@ -2,8 +2,6 @@ package com.codeSprint;
 
 import java.util.HashMap;
 
-import com.codeSprint.LinkedListCycle.ListNode;
-
 public class DetectCycle {
 	public static class ListNode {
 		int val;
@@ -54,15 +52,14 @@ public class DetectCycle {
 	public static void main(String[] args) {
 		ListNode a = new ListNode(1);
 		ListNode b = new ListNode(2);
-//		ListNode c = new ListNode(3);
-//		ListNode d = new ListNode(-4);
-//		ListNode e = new ListNode(-5);
-//		a.next = b;
-//		b.next = c;
-//		c.next = d;
-//		d.next = e;
+		ListNode c = new ListNode(3);
+		ListNode d = new ListNode(4);
+		ListNode e = new ListNode(5);
 		a.next = b;
-		b.next = a;
+		b.next = c;
+		c.next = d;
+		d.next = e;
+		e.next = b;
 		ListNode loop = Cycle(a);
 		if(loop == null) {
 			System.out.println("it is null");
