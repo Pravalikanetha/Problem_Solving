@@ -1,6 +1,6 @@
-package com.codeSprint;
+package com.codesprint;
 
- public class ReverseLinkedList {
+public class DeleteTheMiddleNode {
 	public static class ListNode {
 		int val;
 		ListNode next;
@@ -8,17 +8,6 @@ package com.codeSprint;
 			this.val=val;
 		}
 	}
-	public static ListNode reverseList(ListNode head) {
-        ListNode temp = head;
-        ListNode prev = null;
-        while(temp!=null){
-            ListNode front = temp.next;
-            temp.next = prev;
-            prev = temp ;
-            temp = front;
-        }
-        return prev;
-    }
 	public static void display(ListNode head) {
 		ListNode temp = head;
 		while(temp!=null) {
@@ -29,18 +18,33 @@ package com.codeSprint;
 			temp=temp.next;
 		}
 	}
+	public static ListNode deleteMiddle(ListNode head) {
+		ListNode slow = head;
+		ListNode fast = head;
+		fast=fast.next.next;
+		while (fast != null && fast.next != null) {
+			slow = slow.next; 
+		    fast = fast.next.next;
+		}
+		slow.next = slow.next.next;
+		System.out.println(slow.val);
+		return head;
+	}
 	public static void main(String[] args) {
 		ListNode a = new ListNode(1);
 		ListNode b = new ListNode(3);
 		ListNode c = new ListNode(4);
 		ListNode d = new ListNode(7);
-		ListNode e = new ListNode(9);
-		
+		ListNode e = new ListNode(1);
+		ListNode f = new ListNode(2);
+		ListNode g = new ListNode(6);
 		a.next = b;
 		b.next = c;
 		c.next = d;
 		d.next = e;
-		ListNode rev = reverseList(a);
-		display(rev);
+		e.next = f;
+		f.next = g;
+		deleteMiddle(a);
+		display(a);
 	}
 }

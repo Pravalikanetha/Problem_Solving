@@ -1,4 +1,4 @@
-package com.codeSprint;
+package com.codesprint;
 
 public class QueueImplWithLinkedList {
 	static class QueueNode

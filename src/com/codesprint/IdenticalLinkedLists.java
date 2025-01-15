@@ -1,4 +1,4 @@
-package com.codeSprint;
+package com.codesprint;
 
 public class IdenticalLinkedLists {
 	static class Node {

@@ -1,4 +1,4 @@
-package com.codeSprint;
+package com.codesprint;
 
 public class FindPivotIndex {
 	public static int pivot(int[] nums) {

@@ -1,4 +1,4 @@
-package com.codeSprint;
+package com.codesprint;
 
 public class MiddleNodeOfLinkedList {
 	public static class ListNode {

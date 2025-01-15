@@ -1,4 +1,4 @@
-package com.codeSprint;
+package com.codesprint;
 
 public class SquaresOfSortedArray {
 	public static void rev(int[] nums) {

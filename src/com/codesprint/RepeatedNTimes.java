@@ -1,4 +1,4 @@
-package com.codeSprint;
+package com.codesprint;
 
 import java.util.HashMap;
 import java.util.HashSet;

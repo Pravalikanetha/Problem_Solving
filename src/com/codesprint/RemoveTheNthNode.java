@@ -1,4 +1,4 @@
-package com.codeSprint;
+package com.codesprint;
 
 public class RemoveTheNthNode {
 	public static class ListNode {

@@ -1,4 +1,4 @@
-package com.codeSprint;
+package com.codesprint;
 
 public class RearrangeArray {
 	public int[] rearrangeArray(int[] nums) {
