@@ -1,4 +1,8 @@
-package com.code.firstsprint;
+package com.code.secondsprint;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class DeleteNodeInDoublyLinkedLIst {
 	public static class Node {
@@ -11,6 +15,7 @@ public class DeleteNodeInDoublyLinkedLIst {
 		Node(int val,Node next){
 			this.val=val;
 			this.next = next;
+			prev = null;
 		}
 	}
 	public static Node deleteTail(Node head) {
@@ -23,7 +28,30 @@ public class DeleteNodeInDoublyLinkedLIst {
 		tail.prev = null;
 		return head;
 	}
-	
+	public static Node deleteNode(Node head, int x) {
+		if(head==null || head.next == null || x <= 0) {
+			return null;
+		}
+		if(x==1) {
+			head = head.next;
+			head.prev = null;
+			return head;
+		}
+		Node slow = new Node(0);
+		slow.next = head;
+		Node fast = head;
+		for (int i = 1; i < x; i++) {
+			slow = slow.next;
+			fast = fast.next;
+		}
+		if(slow.next != null) {
+		slow.next = slow.next.next;
+		slow.next.prev = slow;
+		fast.next = null;
+		fast.prev = null;
+		}
+		return head;
+	}
 	public static void display(Node head) {
 		Node temp = head;
 		while(temp!=null) {
@@ -48,7 +76,15 @@ public class DeleteNodeInDoublyLinkedLIst {
 		e.prev = d;
 		f.prev = e;
 		
-		Node ans = deleteTail(a);
+		Node ans = deleteNode(a, 2);
 		display(ans);
+		
+		try {
+			List<Integer> li = new ArrayList<>();
+			Collections.sort(li);
+		}
+		catch(Exception ex) {
+			System.out.println(ex.getMessage());
+		}
 	}
 }
