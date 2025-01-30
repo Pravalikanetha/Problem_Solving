@@ -1,8 +1,7 @@
 package com.test;
 
 public interface Phone {
-	void add();
-	default void message() {
-		System.out.println("This is phone");
-	}
+	default void message2(String msg) {
+        System.out.println("Phone: " + msg);
+    }
 }
