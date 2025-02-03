@@ -55,11 +55,8 @@ public class SwapNodesInLinkedList {
 	public static ListNode swap(ListNode head, int k) { //optimal
 		ListNode ptr = head;
 		while(--k > 0) {
-			System.out.println(ptr.val +" "+k);
 			ptr = ptr.next;
-			System.out.println(ptr.val +" "+k);
 		}
-		System.out.println(ptr.val);
 		ListNode p1 = head;
 		ListNode p2 = ptr;
 		while(p2.next!=null) {

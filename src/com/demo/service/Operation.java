@@ -9,3 +9,4 @@ public interface Operation {
 //	boolean isGreater(int a, int b);
 	int print(int num, int num1) throws IOException;
 }
+ 
