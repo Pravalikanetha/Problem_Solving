@@ -1,7 +1,5 @@
 package com.code.secondsprint;
 
-import java.util.ArrayList;
-
 public class SwapNodeInPairs {
 	public static class ListNode {
 		int val;
@@ -10,27 +8,51 @@ public class SwapNodeInPairs {
 			this.val=val;
 		}
 	}
-	public static void swap(int a, int b) {
-		int dup = a;
-		a = b; 
-		b = dup;
-	}
-	public static void swapPairs(ListNode head) {
-		ListNode temp = head;
+	
+	public static ListNode swapPairs(ListNode head) {
+		if(head == null) {
+			return null;
+		}
+		if(head.next == null) {
+			return head;
+		}
 		int size = 0;
-		while(temp!=null) {
-			temp = temp.next;
+		ListNode first = head;
+		while(first!=null) {
 			size++;
+			first = first.next;
 		}
-		
-		int[] arr1 = new int[size];
-		temp=head;
+		first = head;
+		ListNode second = head.next;
 		int i = 0;
-		for (int j = 0; j < arr1.length; j++) {
-			
+		int j = 1;
+		int[] arr = new int[size];
+		while(second!=null && second.next!=null) {
+			arr[i] = second.val;
+			arr[j] = first.val;
+			first = first.next.next;
+			second = second.next.next;
+			i += 2;
+			j += 2;
 		}
-		
-		
+		if(second!=null){arr[size-2] = second.val;}
+		arr[size-1] = first.val;
+		first = head;
+		int k = 0;
+		while(first!=null) {
+			first.val = arr[k];
+			k++;
+			first = first.next;
+		}
+		return head;
+	}
+	public static void display(ListNode head) {
+		ListNode temp = head;
+		while(temp!=null) {
+			System.out.print(temp.val);
+			if(temp.next!=null) System.out.print("->");
+			temp=temp.next;
+		}
 	}
 	public static void main(String[] args) {
 		ListNode a = new ListNode(1);
@@ -38,12 +60,13 @@ public class SwapNodeInPairs {
 		ListNode c = new ListNode(3);
 		ListNode d = new ListNode(4);
 		ListNode e = new ListNode(5);
-		
+
 		a.next = b;
 		b.next = c;
 		c.next = d;
 		d.next = e;
 		
-		swapPairs(a);
+		ListNode ans = swapPairs(a);
+		display(ans);
 	}
 }
