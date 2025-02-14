@@ -18,7 +18,6 @@ public class AddToArrayFormOfInteger {
         for (char c : number.toString().toCharArray()) {
             result.add(c - '0'); 
         }
-
         return result;
 	}
 	public static void main(String[] args) {
