@@ -1,9 +1,5 @@
 package com.code.secondsprint;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class DeleteNodeInDoublyLinkedLIst {
 	public static class Node {
 		int val;
@@ -79,12 +75,12 @@ public class DeleteNodeInDoublyLinkedLIst {
 		Node ans = deleteNode(a, 2);
 		display(ans);
 		
-		try {
-			List<Integer> li = new ArrayList<>();
-			Collections.sort(li);
-		}
-		catch(Exception ex) {
-			System.out.println(ex.getMessage());
-		}
+//		try {
+//			List<Integer> li = new ArrayList<>();
+//			Collections.sort(li);
+//		}
+//		catch(Exception ex) {
+//			System.out.println(ex.getMessage());
+//		}
 	}
 }

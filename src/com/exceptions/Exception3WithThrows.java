@@ -1,10 +1,6 @@
 package com.exceptions;
 
 public class Exception3WithThrows {
-	public static void main(String[] args) throws InterruptedException {
-		callingThread();
-		System.out.println("padukunna sare na ");
-	}
 
 	static void callingThread() {
 		try {
@@ -12,5 +8,9 @@ public class Exception3WithThrows {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	public static void main(String[] args) throws InterruptedException {
+		callingThread();
+		System.out.println("padukunna sare na ");
 	}
 }

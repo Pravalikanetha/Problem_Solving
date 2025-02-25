@@ -9,7 +9,7 @@ public class SubArrayAtmostTwoDistinctIntegers {
 		HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
 		for (int i = 0; i < arr.length; i++) {
 			 hm.put(arr[i], hm.getOrDefault(arr[i], 0)+1);
-			 
+			  
 			 while(hm.size()>2) {
 				 hm.put(arr[l], hm.get(arr[l])-1);
 				 if(hm.get(arr[l]) == 0) {
